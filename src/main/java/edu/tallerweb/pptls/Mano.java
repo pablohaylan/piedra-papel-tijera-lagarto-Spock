@@ -22,52 +22,34 @@ private Forma miForma;
 	 */
 	public Resultado jugarCon(final Mano otra) {
 		Resultado resultadoPartida=Resultado.PIERDE;
-		
 		if(this.miForma==otra.miForma){
-			resultadoPartida = Resultado.EMPATA;
+			resultadoPartida=Resultado.EMPATA;
 		}
-		
-		
 		
 		switch (this.miForma) 
         { 
-            case PIEDRA: if (otra.miForma == Forma.TIJERA || otra.miForma == Forma.LAGARTO ) {
-            	
-            	resultadoPartida = Resultado.GANA;
-            	
+            case PIEDRA: if (otra.miForma==Forma.TIJERA||otra.miForma==Forma.LAGARTO){
+            	resultadoPartida=Resultado.GANA;
             }
                 break; 
-
-            case SPOCK: if (otra.miForma == Forma.PIEDRA || otra.miForma == Forma.TIJERA){
-            	
-            	resultadoPartida = Resultado.GANA;            	
+            case SPOCK:if(otra.miForma==Forma.PIEDRA||otra.miForma==Forma.TIJERA){
+            	resultadoPartida=Resultado.GANA;            	
             } 
-
                 break; 
-
-            case PAPEL: if (otra.miForma == Forma.SPOCK || otra.miForma == Forma.PIEDRA){
-            	
-            	resultadoPartida = Resultado.GANA;            	
+            case PAPEL:if(otra.miForma==Forma.SPOCK||otra.miForma==Forma.PIEDRA){  	
+            	resultadoPartida=Resultado.GANA;            	
             } 
-
                 break;               
-
-            case LAGARTO: if (otra.miForma == Forma.PAPEL || otra.miForma == Forma.SPOCK){
-            	
-            	resultadoPartida = Resultado.GANA;            	
+            case LAGARTO:if(otra.miForma==Forma.PAPEL||otra.miForma==Forma.SPOCK){
+            	resultadoPartida=Resultado.GANA;            	
             } 
-
                 break; 
-                
-            case TIJERA: if (otra.miForma == Forma.LAGARTO || otra.miForma == Forma.PAPEL){
-            	
-            	resultadoPartida = Resultado.GANA;            	
+                case TIJERA: if (otra.miForma==Forma.LAGARTO||otra.miForma==Forma.PAPEL){
+            	resultadoPartida=Resultado.GANA;            	
             } 
-
                 break;     
         } 	
-		
-		return  resultadoPartida;
+				return resultadoPartida;
 	}
 
 }
